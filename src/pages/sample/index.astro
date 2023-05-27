@@ -1,0 +1,229 @@
+---
+let question1 = "What is your name?";
+let answer1 = "";
+let answer2 = "";
+let question2 = "What is your Ward?";
+let answer3 = "";
+let question3 = "What is your MRD?";
+let answer4 = "";
+let question4 = "What is the spm no?";
+let RFT__urea_creal = false;
+let ELECTROLYTES = false;
+let amylase_lipase = false;
+let BILI__T_BILI__D = false;
+let ALBUMIN = false;
+let PROTEINS = false;
+let LFT__SGOT_SGPT = false;
+let LIPIDS_CHOLESTEROL = false;
+let LDH = false;
+let URIC___ACID = false;
+let CAL_PO4 = false;
+let warning = false;
+---
+
+<div class="flex items-center">
+  <form class="flex w-full flex-col m-auto gap-4 items-center">
+    <h1 class="text-primary text-5xl text-center">SPECIMEN CONTAINER</h1>
+    <div class="w-11/12 items-center flex flex-col">
+      <div class="w-full min-w-xs form-control md:w-1/2">
+        <label class="label" for={question1}>
+          <span class="label-text">{question1}</span>
+        </label>
+        <input
+          type="text"
+          placeholder={question1}
+          class="w-full min-w-xs input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full min-w-xs form-control md:w-1/2">
+        <label class="label" for={question2}>
+          <span class="label-text">{question2}</span>
+        </label>
+        <input
+          type="text"
+          placeholder={question2}
+          class="w-full min-w-xs input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full min-w-xs form-control md:w-1/2">
+        <label class="label" for={question3}>
+          <span class="label-text">{question3}</span>
+        </label>
+        <input
+          type="text"
+          placeholder={question3}
+          class="w-full min-w-xs input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full min-w-xs form-control md:w-1/2">
+        <label class="label" for={question4}>
+          <span class="label-text">{question4}</span>
+        </label>
+        <input
+          type="text"
+          placeholder={question4}
+          class="w-full min-w-xs input input-bordered"
+          required
+        />
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="RFT - urea, creal"
+            />
+            <span class="label-text">RFT - urea, creal</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="ELECTROLYTES"
+            />
+            <span class="label-text">ELECTROLYTES</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="amylase, lipase"
+            />
+            <span class="label-text">amylase, lipase</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="BILI - T, BILI - D"
+            />
+            <span class="label-text">BILI - T, BILI - D</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="ALBUMIN"
+            />
+            <span class="label-text">ALBUMIN</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="PROTEINS"
+            />
+            <span class="label-text">PROTEINS</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="LFT - SGOT, SGPT"
+            />
+            <span class="label-text">LFT - SGOT, SGPT</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="LIPIDS, CHOLESTEROL"
+            />
+            <span class="label-text">LIPIDS, CHOLESTEROL</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="LDH"
+            />
+            <span class="label-text">LDH</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="URIC ACID"
+            />
+            <span class="label-text">URIC ACID</span>
+          </div>
+        </label>
+        <label
+          class="cursor-pointer label flex-col items-start min-w-full gap-1"
+        >
+          <div class="flex gap-4">
+            <input
+              type="checkbox"
+              class="checkbox left"
+              name="blood_test_check"
+              value="CAL, PO4"
+            />
+            <span class="label-text">CAL, PO4</span>
+          </div>
+        </label>
+        <div class="w-full flex flex-row items-center justify-center">
+          <button type="submit" class="btn btn-primary w-fit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script>
+    function submitted(e) {
+      e.preventDefault();
+      let form = e.target;
+      let data = Object.fromEntries(new FormData(form));
+      console.log(data);
+    }
+  </script>
+</div>

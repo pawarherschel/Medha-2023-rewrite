@@ -1,0 +1,257 @@
+---
+let routine = false;
+let urgent = false;
+
+let name = "";
+let date = new Date();
+
+let reffered_by = "";
+let opd_ipd_no = "";
+
+let voucher_no = "";
+let ward_bed_no = "";
+let bed_bank_no = "";
+
+let date_of_admission = new Date();
+let date_on_which_blood_components_required = new Date();
+
+let blood_group_of_patient = "";
+let history = "";
+
+let whole_blood = 0;
+let fresh_frozen_plasma = 0;
+let cryoprecipitate = 0;
+let saline_wash_red_blood_cells = 0;
+let packed_cells = 0;
+let platelet_concentrate = 0;
+let cryo_poor_plasma = 0;
+
+let notes = "";
+---
+
+<form class="rounded-box m-2">
+  <div class="gap-4 flex flex-col">
+    <div class="flex flex-row-reverse gap-8">
+      <div class="form-control flex-row gap-2">
+        <label class="label cursor-pointer gap-1">
+          <span class="label-text">Routine</span>
+          <input
+            type="checkbox"
+            class="checkbox checkbox-accent"
+            x-model="routine"
+          /></label
+        >
+      </div>
+      <div class="form-control flex-row gap-2">
+        <label class="label cursor-pointer gap-1">
+          <span class="label-text">Urgent</span>
+          <input
+            type="checkbox"
+            class="checkbox checkbox-accent"
+            x-model="urgent"
+          /></label
+        >
+      </div>
+    </div>
+    <div class="flex flex-row min-w-full gap-2">
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Name:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Name"
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Date:</span>
+        </label>
+        <input
+          type="date"
+          placeholder="Date"
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+    </div>
+    <div class="flex flex-row min-w-full gap-2">
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Reffered By:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Reffered By"
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">OPD/IPD No:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="OPD/IPD No."
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+    </div>
+    <div class="flex flex-row min-w-full gap-2">
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Voucher No:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Voucher No."
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Ward / Bed No:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Ward/Bed No."
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Bed Bank No:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Bed Bank No."
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+    </div>
+    <div class="flex flex-row min-w-full gap-2 min-h-fit">
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Date of Admission:</span>
+        </label>
+        <input
+          type="date"
+          placeholder="Date of Admission"
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text"
+            >Date on which blood / components required:
+          </span>
+        </label>
+        <input
+          type="date"
+          placeholder="Date on which blood components required"
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+      <div class="w-full form-control justify-between">
+        <label class="label">
+          <span class="label-text">Blood Group of Patient:</span>
+        </label>
+        <input
+          type="text"
+          placeholder="Blood Group of Patient"
+          class="w-full input input-bordered"
+          required
+        />
+      </div>
+    </div>
+    <div class="form-control justify-between">
+      <label class="label">
+        <span class="label-text">History</span>
+      </label>
+      <textarea class="textarea textarea-bordered h-24" placeholder="History"
+      ></textarea>
+    </div>
+    <br />
+    <div class="flex flex-col min-w-full gap-2">
+      <div class="form-control justify-between flex-row">
+        <label class="label min-w-fit flex-1">
+          <span class="label-text">Whole Blood:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Whole Blood"
+          class="w-full input input-bordered flex-1"
+          required
+        />
+      </div>
+      <div class="form-control justify-between flex-row">
+        <label class="label min-w-fit flex-1">
+          <span class="label-text">Fresh Frozen Plasma:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Fresh Frozen Plasma"
+          class="w-full input input-bordered flex-1"
+          required
+        />
+      </div>
+      <div class="form-control justify-between flex-row">
+        <label class="label min-w-fit flex-1">
+          <span class="label-text">Cryoprecipitate:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Cryoprecipitate"
+          class="w-full input input-bordered flex-1"
+          required
+        />
+      </div>
+      <div class="form-control justify-between flex-row">
+        <label class="label min-w-fit flex-1">
+          <span class="label-text">Saline Wash Red Blood Cells:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Saline Wash Red Blood Cells"
+          class="w-full input input-bordered flex-1"
+          required
+        />
+      </div>
+      <div class="form-control justify-between flex-row">
+        <label class="label min-w-fit flex-1">
+          <span class="label-text">Platelet Concentrate:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Platelet Concentrate"
+          class="w-full input input-bordered flex-1"
+          required
+        />
+      </div>
+      <div class="form-control justify-between flex-row">
+        <label class="label min-w-fit flex-1">
+          <span class="label-text">Platelet Rich Plasma:</span>
+        </label>
+        <input
+          type="number"
+          placeholder="Platelet Rich Plasma"
+          class="w-full input input-bordered flex-1"
+          required
+        />
+      </div>
+    </div>
+    <br />
+    <div class="flex items-center w-full flex-row justify-center">
+      <button class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
